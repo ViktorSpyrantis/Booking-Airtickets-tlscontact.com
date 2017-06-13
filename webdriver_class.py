@@ -3,10 +3,12 @@ from pynput.keyboard import Key, Controller
 import time
 import traceback
 
-driver = webdriver.Chrome('C:\chromedriver.exe')
 
 
-def appointment_search():
+
+def appointment_search(email, pw):
+    print(email,pw)
+    driver = webdriver.Chrome('C:\chromedriver.exe')
     driver.get('https://fr.tlscontact.com/gb/LON/login.php')            #open webpage
     driver.find_element_by_id('email').send_keys('karltannerlegend@yahoo.gr')           #paste  email
     driver.find_element_by_id('pwd').send_keys('sadja6234jehd')         #paste  password
